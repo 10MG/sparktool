@@ -3,13 +3,19 @@
 	xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
 	<modelVersion>4.0.0</modelVersion>
 
+	<description>
+		<![CDATA[
+利用sparktool的动态结构化查询语言能力，给SparkSQL赋能。通过内建SQL引擎解决SparkSQL传参的难题。
+The dynamic structured query language ability of sparktool is used to powerful SparkSQL. Solve the problem of parameter transfer in SparkSQL by built-in SQL Engine.
+		]]>
+	</description>
 	<groupId>cn.tenmg</groupId>
 	<artifactId>sparktool</artifactId>
 	<version>1.0.0</version>
 	<packaging>jar</packaging>
 
 	<name>sparktool</name>
-	<url>http://maven.apache.org</url>
+	<url>https://github.com/10MG/sparktool</url>
 
 	<properties>
 		<project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
@@ -17,7 +23,7 @@
 		<maven.compiler.target>1.8</maven.compiler.target>
 		<log4j-core.version>2.14.0</log4j-core.version>
 		<junit.version>4.13.1</junit.version>
-		<sqltool.version>1.2.3</sqltool.version>
+		<sparktool.version>1.2.3</sparktool.version>
 		<spark.version>3.0.1</spark.version>
 	</properties>
 
@@ -28,11 +34,11 @@
 			<artifactId>log4j-core</artifactId>
 			<version>${log4j-core.version}</version>
 		</dependency>
-		<!-- https://mvnrepository.com/artifact/cn.tenmg/sqltool -->
+		<!-- https://mvnrepository.com/artifact/cn.tenmg/sparktool -->
 		<dependency>
 			<groupId>cn.tenmg</groupId>
 			<artifactId>sqltool</artifactId>
-			<version>${sqltool.version}</version>
+			<version>${sparktool.version}</version>
 		</dependency>
 		<!-- https://mvnrepository.com/artifact/org.apache.spark/spark-sql -->
 		<dependency>
@@ -48,4 +54,93 @@
 			<scope>test</scope>
 		</dependency>
 	</dependencies>
+
+	<developers>
+		<developer>
+			<name>zhaoweijun</name>
+			<email>wjzhao@aliyun.com</email>
+			<organization>10MG</organization>
+		</developer>
+	</developers>
+
+
+	<scm>
+		<connection>scm:git:git@github.com/10MG/sparktool.git</connection>
+		<url>git@github.com/10MG/sparktool.git</url>
+		<developerConnection>https://github.com/10MG</developerConnection>
+	</scm>
+
+	<distributionManagement>
+		<repository>
+			<id>sonatype</id>
+			<url>https://oss.sonatype.org/service/local/staging/deploy/maven2/</url>
+		</repository>
+		<snapshotRepository>
+			<id>sonatype</id>
+			<url>https://oss.sonatype.org/content/repositories/snapshots/</url>
+		</snapshotRepository>
+	</distributionManagement>
+
+	<build>
+		<plugins>
+			<plugin>
+				<artifactId>maven-compiler-plugin</artifactId>
+				<version>3.8.1</version>
+				<configuration>
+					<source>1.8</source>
+					<target>1.8</target>
+				</configuration>
+			</plugin>
+			<plugin>
+				<groupId>org.apache.maven.plugins</groupId>
+				<artifactId>maven-source-plugin</artifactId>
+				<version>3.2.1</version>
+				<executions>
+					<execution>
+						<id>attach-sources</id>
+						<goals>
+							<goal>jar</goal>
+						</goals>
+					</execution>
+				</executions>
+			</plugin>
+			<plugin>
+				<groupId>org.apache.maven.plugins</groupId>
+				<artifactId>maven-surefire-plugin</artifactId>
+				<version>2.22.2</version>
+				<configuration>
+					<skip>true</skip>
+				</configuration>
+			</plugin>
+			<plugin>
+				<groupId>org.apache.maven.plugins</groupId>
+				<artifactId>maven-javadoc-plugin</artifactId>
+				<version>2.10.4</version>
+				<executions>
+					<execution>
+						<phase>package</phase>
+						<goals>
+							<goal>jar</goal>
+						</goals>
+						<configuration>
+							<additionalparam>-Xdoclint:none</additionalparam>
+						</configuration>
+					</execution>
+				</executions>
+			</plugin>
+			<plugin>
+				<groupId>org.apache.maven.plugins</groupId>
+				<artifactId>maven-gpg-plugin</artifactId>
+				<version>1.6</version>
+				<executions>
+					<execution>
+						<phase>verify</phase>
+						<goals>
+							<goal>sign</goal>
+						</goals>
+					</execution>
+				</executions>
+			</plugin>
+		</plugins>
+	</build>
 </project>
