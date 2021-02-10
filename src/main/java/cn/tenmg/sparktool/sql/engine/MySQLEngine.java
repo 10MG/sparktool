@@ -1,0 +1,28 @@
+package cn.tenmg.sparktool.sql.engine;
+
+/**
+ * MySQL方言的SQL引擎
+ * 
+ * @author 赵伟均 wjzhao@aliyun.com
+ *
+ */
+public class MySQLEngine extends BasicSQLEngine {
+
+	/**
+	 * 
+	 */
+	private static final long serialVersionUID = -3906596407170164697L;
+
+	private MySQLEngine() {
+		super();
+	}
+
+	private static class InstanceHolder {
+		private static final MySQLEngine INSTANCE = new MySQLEngine();
+	}
+
+	public static final MySQLEngine getInstance() {
+		return InstanceHolder.INSTANCE;
+	}
+
+}
