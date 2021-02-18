@@ -23,10 +23,16 @@ The dynamic structured query language ability of sparktool is used to powerful S
 		<maven.compiler.target>1.8</maven.compiler.target>
 		<log4j-core.version>2.14.0</log4j-core.version>
 		<junit.version>4.13.1</junit.version>
-		<sparktool.version>1.2.3</sparktool.version>
+		<sqltool.version>1.2.3</sqltool.version>
 		<spark.version>3.0.1</spark.version>
 	</properties>
-
+	<repositories>
+		<repository>
+			<id>Maven</id>
+			<name>Maven Repository</name>
+			<url>https://repo1.maven.org/maven2/</url>
+		</repository>
+	</repositories>
 	<dependencies>
 		<!-- https://mvnrepository.com/artifact/org.apache.logging.log4j/log4j-core -->
 		<dependency>
@@ -34,11 +40,11 @@ The dynamic structured query language ability of sparktool is used to powerful S
 			<artifactId>log4j-core</artifactId>
 			<version>${log4j-core.version}</version>
 		</dependency>
-		<!-- https://mvnrepository.com/artifact/cn.tenmg/sparktool -->
+		<!-- https://mvnrepository.com/artifact/cn.tenmg/sqltool -->
 		<dependency>
 			<groupId>cn.tenmg</groupId>
 			<artifactId>sqltool</artifactId>
-			<version>${sparktool.version}</version>
+			<version>${sqltool.version}</version>
 		</dependency>
 		<!-- https://mvnrepository.com/artifact/org.apache.spark/spark-sql -->
 		<dependency>
@@ -55,6 +61,15 @@ The dynamic structured query language ability of sparktool is used to powerful S
 		</dependency>
 	</dependencies>
 
+	<licenses>
+		<license>
+			<name>Apache License, Version 2.0</name>
+			<url>http://www.apache.org/licenses/LICENSE-2.0.txt</url>
+			<distribution>repo</distribution>
+			<comments>A business-friendly OSS license</comments>
+		</license>
+	</licenses>
+
 	<developers>
 		<developer>
 			<name>zhaoweijun</name>
@@ -62,7 +77,6 @@ The dynamic structured query language ability of sparktool is used to powerful S
 			<organization>10MG</organization>
 		</developer>
 	</developers>
-
 
 	<scm>
 		<connection>scm:git:git@github.com/10MG/sparktool.git</connection>
