@@ -11,7 +11,7 @@ The dynamic structured query language ability of sparktool is used to powerful S
 	</description>
 	<groupId>cn.tenmg</groupId>
 	<artifactId>sparktool</artifactId>
-	<version>1.0.0</version>
+	<version>1.0.1</version>
 	<packaging>jar</packaging>
 
 	<name>sparktool</name>
@@ -23,7 +23,7 @@ The dynamic structured query language ability of sparktool is used to powerful S
 		<maven.compiler.target>1.8</maven.compiler.target>
 		<log4j-core.version>2.14.0</log4j-core.version>
 		<junit.version>4.13.1</junit.version>
-		<sqltool.version>1.2.3</sqltool.version>
+		<sqltool.version>1.2.4</sqltool.version>
 		<spark.version>3.0.1</spark.version>
 	</properties>
 	<repositories>
