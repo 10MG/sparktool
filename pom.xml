@@ -65,6 +65,11 @@
 		</license>
 	</licenses>
 
+	<organization>
+		<name>10MG</name>
+		<url>http://www.10mg.cn</url>
+	</organization>
+
 	<developers>
 		<developer>
 			<name>zhaoweijun</name>
@@ -74,9 +79,9 @@
 	</developers>
 
 	<scm>
-		<connection>scm:git:git@github.com/10MG/sparktool.git</connection>
-		<url>git@github.com/10MG/sparktool.git</url>
-		<developerConnection>https://github.com/10MG</developerConnection>
+		<connection>scm:git:git@gitee.com:tenmg/sparktool.git</connection>
+		<url>git@gitee.com:tenmg/sparktool.git</url>
+		<developerConnection>scm:git:git@gitee.com:tenmg/sparktool.git</developerConnection>
 	</scm>
 
 	<distributionManagement>
