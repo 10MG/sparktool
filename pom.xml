@@ -3,12 +3,7 @@
 	xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
 	<modelVersion>4.0.0</modelVersion>
 
-	<description>
-		<![CDATA[
-利用sparktool的动态结构化查询语言能力，给SparkSQL赋能。通过内建SQL引擎解决SparkSQL传参的难题。
-The dynamic structured query language ability of sparktool is used to powerful SparkSQL. Solve the problem of parameter transfer in SparkSQL by built-in SQL Engine.
-		]]>
-	</description>
+	<description>通过内建SQL引擎解决SparkSQL传参的难题，利用sqltool的动态结构化查询语言能力，给SparkSQL赋能。</description>
 	<groupId>cn.tenmg</groupId>
 	<artifactId>sparktool</artifactId>
 	<version>1.0.1</version>
