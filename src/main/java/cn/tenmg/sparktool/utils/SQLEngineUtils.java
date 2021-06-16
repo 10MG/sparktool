@@ -5,7 +5,6 @@ import cn.tenmg.sparktool.sql.engine.MySQLEngine;
 import cn.tenmg.sparktool.sql.engine.OracleEngine;
 import cn.tenmg.sparktool.sql.engine.PostgreSQLEngine;
 import cn.tenmg.sparktool.sql.engine.SparkSQLEngine;
-import cn.tenmg.sqltool.exception.NoSuitableSqlEngineException;
 
 /**
  * SQL引擎工具
@@ -31,6 +30,6 @@ public abstract class SQLEngineUtils {
 		} else if (url.contains("postgresql")) {
 			return PostgreSQLEngine.getInstance();
 		}
-		throw new NoSuitableSqlEngineException("There is no suitable SQL engine here for url: " + url);
+		return SparkSQLEngine.getInstance();
 	}
 }
