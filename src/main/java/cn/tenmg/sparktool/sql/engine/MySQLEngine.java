@@ -13,16 +13,14 @@ public class MySQLEngine extends BasicSQLEngine {
 	 */
 	private static final long serialVersionUID = -3906596407170164697L;
 
+	private static final MySQLEngine INSTANCE = new MySQLEngine();
+
 	private MySQLEngine() {
 		super();
 	}
 
-	private static class InstanceHolder {
-		private static final MySQLEngine INSTANCE = new MySQLEngine();
-	}
-
 	public static final MySQLEngine getInstance() {
-		return InstanceHolder.INSTANCE;
+		return INSTANCE;
 	}
 
 }

@@ -13,16 +13,14 @@ public class PostgreSQLEngine extends BasicSQLEngine {
 	 */
 	private static final long serialVersionUID = 5846436770042482606L;
 
+	private static final PostgreSQLEngine INSTANCE = new PostgreSQLEngine();
+
 	private PostgreSQLEngine() {
 		super();
 	}
 
-	private static class InstanceHolder {
-		private static final PostgreSQLEngine INSTANCE = new PostgreSQLEngine();
-	}
-
 	public static final PostgreSQLEngine getInstance() {
-		return InstanceHolder.INSTANCE;
+		return INSTANCE;
 	}
 
 }

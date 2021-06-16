@@ -4,6 +4,7 @@ import cn.tenmg.sparktool.sql.SQLEngine;
 import cn.tenmg.sparktool.sql.engine.MySQLEngine;
 import cn.tenmg.sparktool.sql.engine.OracleEngine;
 import cn.tenmg.sparktool.sql.engine.PostgreSQLEngine;
+import cn.tenmg.sparktool.sql.engine.SQLServerEngine;
 import cn.tenmg.sparktool.sql.engine.SparkSQLEngine;
 
 /**
@@ -29,6 +30,8 @@ public abstract class SQLEngineUtils {
 			return OracleEngine.getInstance();
 		} else if (url.contains("postgresql")) {
 			return PostgreSQLEngine.getInstance();
+		} else if (url.contains("sqlserver")) {
+			return SQLServerEngine.getInstance();
 		}
 		return SparkSQLEngine.getInstance();
 	}

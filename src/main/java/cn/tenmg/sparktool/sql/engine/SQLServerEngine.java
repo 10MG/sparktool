@@ -23,6 +23,16 @@ public class SQLServerEngine extends AbstractSQLEngine {
 			DATE_TIME_PATTERN = "yyyy-MM-dd HH:mm:ss", DATETIME = "DATETIME", TIME_PATTERN = "HH:mm:ss.S",
 			TIME = "TIME";
 
+	private static final SQLServerEngine INSTANCE = new SQLServerEngine();
+
+	private SQLServerEngine() {
+		super();
+	}
+
+	public static final SQLServerEngine getInstance() {
+		return INSTANCE;
+	}
+
 	@Override
 	String parse(Date date) {
 		if (date instanceof Timestamp) {
