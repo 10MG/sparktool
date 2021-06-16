@@ -10,7 +10,7 @@
 	<packaging>jar</packaging>
 
 	<name>sparktool</name>
-	<url>https://github.com/10MG/sparktool</url>
+	<url>https://gitee.com/tenmg/sparktool</url>
 
 	<properties>
 		<project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
