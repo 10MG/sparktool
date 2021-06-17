@@ -13,16 +13,14 @@ public class SparkSQLEngine extends BasicSQLEngine {
 	 */
 	private static final long serialVersionUID = 4709716690186443192L;
 
+	private static final SparkSQLEngine INSTANCE = new SparkSQLEngine();
+
 	private SparkSQLEngine() {
-
-	}
-
-	private static class InstanceHolder {
-		private static final SparkSQLEngine INSTANCE = new SparkSQLEngine();
+		super();
 	}
 
 	public static final SparkSQLEngine getInstance() {
-		return InstanceHolder.INSTANCE;
+		return INSTANCE;
 	}
 
 }

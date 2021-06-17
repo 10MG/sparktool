@@ -22,16 +22,14 @@ public class OracleEngine extends AbstractSQLEngine {
 
 	private static final String DATE_PATTERN = "YYYY-MM-DD HH24:MI:SS", TIMESTAMP_PATTERN = "YYYY-MM-DD HH24:MI:SS.FF6";
 
+	private static final OracleEngine INSTANCE = new OracleEngine();
+
 	private OracleEngine() {
 		super();
 	}
-	
-	private static class InstanceHolder {
-		private static final OracleEngine INSTANCE = new OracleEngine();
-	}
 
 	public static final OracleEngine getInstance() {
-		return InstanceHolder.INSTANCE;
+		return INSTANCE;
 	}
 
 	@Override
