@@ -4,7 +4,7 @@ import java.sql.Time;
 import java.sql.Timestamp;
 import java.util.Date;
 
-import cn.tenmg.sqltool.utils.DateUtils;
+import cn.tenmg.dsql.utils.DateUtils;
 
 /**
  * SQLServer方言的SQL引擎

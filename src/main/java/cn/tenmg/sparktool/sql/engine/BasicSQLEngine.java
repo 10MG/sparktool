@@ -2,7 +2,7 @@ package cn.tenmg.sparktool.sql.engine;
 
 import java.util.Date;
 
-import cn.tenmg.sqltool.utils.DateUtils;
+import cn.tenmg.dsql.utils.DateUtils;
 
 /**
  * 基本SQL引擎
