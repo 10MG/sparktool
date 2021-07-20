@@ -3,7 +3,7 @@ package cn.tenmg.sparktool.sql.engine;
 import java.sql.Timestamp;
 import java.util.Date;
 
-import cn.tenmg.sqltool.utils.DateUtils;
+import cn.tenmg.dsql.utils.DateUtils;
 
 /**
  * Oracle方言的SQL引擎

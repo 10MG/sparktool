@@ -2,7 +2,7 @@ package cn.tenmg.sparktool.sql;
 
 import java.io.Serializable;
 
-import cn.tenmg.sqltool.dsql.NamedSQL;
+import cn.tenmg.dsql.NamedSQL;
 
 /**
  * SQL引擎。用于解析带参数的SQL为可执行SQL
