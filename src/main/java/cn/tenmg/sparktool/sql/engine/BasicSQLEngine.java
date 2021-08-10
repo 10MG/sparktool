@@ -21,7 +21,7 @@ public class BasicSQLEngine extends AbstractSQLEngine {
 
 	@Override
 	String parse(Date date) {
-		return DateUtils.format(date, CALENDAR_FORMAT);
+		return "'" + DateUtils.format(date, CALENDAR_FORMAT) + "'";
 	}
 
 }

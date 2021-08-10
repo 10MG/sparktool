@@ -6,7 +6,7 @@
 	<description>通过内建SQL引擎解决SparkSQL传参的难题，利用sqltool的动态结构化查询语言能力，给SparkSQL赋能。</description>
 	<groupId>cn.tenmg</groupId>
 	<artifactId>sparktool</artifactId>
-	<version>1.0.2</version>
+	<version>1.0.3</version>
 	<packaging>jar</packaging>
 
 	<name>sparktool</name>
@@ -16,7 +16,7 @@
 		<project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
 		<maven.compiler.source>1.8</maven.compiler.source>
 		<maven.compiler.target>1.8</maven.compiler.target>
-		<log4j-core.version>2.14.0</log4j-core.version>
+		<log4j-api.version>2.14.1</log4j-api.version>
 		<junit.version>4.13.1</junit.version>
 		<sqltool.version>1.2.4</sqltool.version>
 		<spark.version>3.0.1</spark.version>
@@ -29,11 +29,11 @@
 		</repository>
 	</repositories>
 	<dependencies>
-		<!-- https://mvnrepository.com/artifact/org.apache.logging.log4j/log4j-core -->
+		<!-- https://mvnrepository.com/artifact/org.apache.logging.log4j/log4j-api -->
 		<dependency>
 			<groupId>org.apache.logging.log4j</groupId>
-			<artifactId>log4j-core</artifactId>
-			<version>${log4j-core.version}</version>
+			<artifactId>log4j-api</artifactId>
+			<version>${log4j-api.version}</version>
 		</dependency>
 		<!-- https://mvnrepository.com/artifact/cn.tenmg/dsql -->
 		<dependency>
