@@ -6,7 +6,7 @@
 	<description>通过内建SQL引擎解决SparkSQL传参的难题，利用sqltool的动态结构化查询语言能力，给SparkSQL赋能。</description>
 	<groupId>cn.tenmg</groupId>
 	<artifactId>sparktool</artifactId>
-	<version>1.0.3</version>
+	<version>1.0.4</version>
 	<packaging>jar</packaging>
 
 	<name>sparktool</name>
