@@ -14,7 +14,7 @@ Sparktool的用途是运行动态化的、可传参的Spark SQL。所谓“可�
 ## 三、Sparktool使用示例
 
 <p style="text-indent:2em">
-Sparktool通过SparkDao向外提供API服务，目前SparkDao只有一种实现即DSQLSparkDao构建，DSQLSparkDao需要指定DSQLFactory。sparkDao可以让Spark SQL迸发魔力：
+Sparktool通过SparkDao向外提供API服务，目前SparkDao只有一种实现即DSQLSparkDao。构建DSQLSparkDao需要指定DSQLFactory。SparkDao可以让Spark SQL迸发魔力：
 </p>
 
 ```
