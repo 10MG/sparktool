@@ -19,10 +19,10 @@ SparkDao sparkDao = DSQLSparkDao.build(new XMLFileDSQLFactory(basePackages, suff
 SparkDao sparkDao = DSQLSparkDao.build(dao.getDSQLFactory());
 
 // 使用SparkDao解析执行DSQL从数据库加载数据集
-Dataset<Row> dataset1 = sparkDao.load(sparkSession, dbOptions, dsql, params);
+Dataset<Row> dataset1 = sparkDao.load(sparkSession, dbOptions, dsqlId, params);
 
 // 使用SparkDao将带参数DSQL提交给Spark SQL执行
-Dataset<Row> dataset2 = sparkDao.sql(sparkSession, dsql, params);
+Dataset<Row> dataset2 = sparkDao.sql(sparkSession, plainDSQLText, params);
 ```
 
 ## 获取Sparktool
