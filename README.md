@@ -125,7 +125,7 @@ WHERE EMAIL IS NOT NULL
 ```
 等等。
 
-### 了解DSQL
+### 进一步了解
 
 更多有关[DSQL](https://gitee.com/tenmg/dsql)的介绍，详见[https://gitee.com/tenmg/dsql](https://gitee.com/tenmg/dsql)
 
