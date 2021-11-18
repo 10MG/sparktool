@@ -35,6 +35,74 @@ Dataset<Row> dataset1 = sparkDao.load(sparkSession, dbOptions, dsqlId, params);
 Dataset<Row> dataset2 = sparkDao.sql(sparkSession, plainDSQLText, params);
 ```
 
+## DSQL
+
+[DSQL](https://gitee.com/tenmg/dsql)的全称是动态结构化查询语言(Dynamic Structured Query Language)，它使用特殊字符`#[]`标记动态片段。当实际执行查询时，判断实际传入参数值是否为空（`null`）决定是否保留该片段，同时自动去除`#[]`。以此来避免程序员手动拼接繁杂的SQL，使得程序员能从繁杂的业务逻辑中解脱出来。
+
+### 例子
+
+假设有如下动态查询语句：
+
+```
+SELECT
+  *
+FROM STAFF_INFO S
+WHERE S.STATUS = 'VALID'
+#[AND S.STAFF_ID = :staffId]
+#[AND S.STAFF_NAME LIKE :staffName]
+```
+
+参数staffId为空（`null`），而staffName为非空（非`null`）时，实际执行的语句为：
+
+```
+SELECT
+   *
+ FROM STAFF_INFO S
+ WHERE S.STATUS = 'VALID'
+ AND S.STAFF_NAME LIKE :staffName
+```
+
+相反，参数staffName为空（`null`），而staffId为非空（非`null`）时，实际执行的语句为：
+
+
+```
+SELECT
+   *
+ FROM STAFF_INFO S
+ WHERE S.STATUS = 'VALID'
+ AND S.STAFF_ID = :staffId
+```
+
+或者，参数staffId、staffName均为空（`null`）时，实际执行的语句为：
+
+```
+SELECT
+   *
+ FROM STAFF_INFO S
+ WHERE S.STATUS = 'VALID'
+```
+
+最后，参数staffId、staffName均为非空（非`null`）时，实际执行的语句为：
+
+```
+SELECT
+   *
+ FROM STAFF_INFO S
+ WHERE S.STATUS = 'VALID'
+ AND S.STAFF_ID = :staffId
+ AND S.STAFF_NAME LIKE :staffName
+```
+
+通过上面这个小例子，我们看到了动态结构化查询语言（DSQL）的魔力。这种魔力的来源是巧妙的运用了一个值：空(`null`)，因为该值往往在结构化查询语言(SQL)中很少用到，而且即便使用也是往往作为特殊的常量使用，比如：
+```
+NVL(EMAIL,'无')
+```
+和
+```
+WHERE EMAIL IS NOT NULL
+```
+等等。更多有关[DSQL](https://gitee.com/tenmg/dsql)的介绍，详见[https://gitee.com/tenmg/dsql](https://gitee.com/tenmg/dsql)
+
 ## 相关链接
 
 DSQL开源地址：https://gitee.com/tenmg/dsql
