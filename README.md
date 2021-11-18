@@ -5,7 +5,7 @@ Sparktool是运行Spark SQL的中间件，它能够运行动态化的、可传�
 
 ## 起步
 
-1. 添加依赖
+### 1. 添加依赖
 
 如果采用Maven构建项目，可以通过在pom.xml中添加如下配置引入Sqltool。其中，${sparktool.version}为版本号，可定义属性或直接使用版本号替换。
 
@@ -17,7 +17,7 @@ Sparktool是运行Spark SQL的中间件，它能够运行动态化的、可传�
     <version>${sparktool.version}</version>
 </dependency>
 ```
-2. 调用API
+### 2. 调用API
 
 Sparktool通过SparkDao向外提供API服务，它可以让Spark SQL迸发魔力。目前SparkDao只有一种实现即DSQLSparkDao，构建DSQLSparkDao需要指定DSQLFactory：
 
