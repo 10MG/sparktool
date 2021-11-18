@@ -35,14 +35,6 @@ Dataset<Row> dataset1 = sparkDao.load(sparkSession, dbOptions, dsqlId, params);
 Dataset<Row> dataset2 = sparkDao.sql(sparkSession, plainDSQLText, params);
 ```
 
-## 获取Sparktool
-
-gitee开源地址：https://gitee.com/tenmg/sparktool
-
-github开源地址：https://github.com/10MG/sparktool
-
-maven中央仓库地址：https://mvnrepository.com/artifact/cn.tenmg/sparktool
-
 ## 相关链接
 
 DSQL开源地址：https://gitee.com/tenmg/dsql
