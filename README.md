@@ -61,7 +61,7 @@ Dataset<Row> dataset2 = sparkDao.sql(sparkSession, plainDSQLText, params);
 
 [DSQL](https://gitee.com/tenmg/dsql)的全称是动态结构化查询语言(Dynamic Structured Query Language)，它使用特殊字符`#[]`标记动态片段。当实际执行查询时，判断实际传入参数值是否为空（`null`）决定是否保留该片段，同时自动去除`#[]`。以此来避免程序员手动拼接繁杂的SQL，使得程序员能从繁杂的业务逻辑中解脱出来。
 
-### 例子
+### 简单例子
 
 假设有如下动态查询语句：
 
