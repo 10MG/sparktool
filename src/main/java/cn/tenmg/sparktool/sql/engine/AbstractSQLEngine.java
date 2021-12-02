@@ -11,7 +11,7 @@ import cn.tenmg.sparktool.sql.SQLEngine;
 /**
  * 抽象SQL引擎
  * 
- * @author 赵伟均 wjzhao@aliyun.com
+ * @author June wjzhao@aliyun.com
  *
  */
 public abstract class AbstractSQLEngine extends PlaintextParamsParser implements SQLEngine {

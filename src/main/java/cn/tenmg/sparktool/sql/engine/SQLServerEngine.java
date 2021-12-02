@@ -9,7 +9,7 @@ import cn.tenmg.dsql.utils.DateUtils;
 /**
  * SQLServer方言的SQL引擎
  * 
- * @author 赵伟均 wjzhao@aliyun.com
+ * @author June wjzhao@aliyun.com
  *
  */
 public class SQLServerEngine extends AbstractSQLEngine {

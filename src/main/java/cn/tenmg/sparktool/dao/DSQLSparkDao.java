@@ -15,7 +15,7 @@ import cn.tenmg.sparktool.utils.SQLEngineUtils;
 /**
  * 基于DSQL的Spark数据访问对象
  * 
- * @author 赵伟均 wjzhao@aliyun.com
+ * @author June wjzhao@aliyun.com
  *
  */
 public class DSQLSparkDao implements SparkDao {
