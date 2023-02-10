@@ -5,6 +5,7 @@
         <img alt="maven" src="https://img.shields.io/maven-central/v/cn.tenmg/sparktool.svg?style=flat-square">
     </a>
     <a target="_blank" href="LICENSE"><img src="https://img.shields.io/:license-Apache%202.0-blue.svg"></a>
+    <a target="_blank" href='https://gitee.com/tenmg/sparktool'><img src="https://gitee.com/tenmg/sparktool/badge/star.svg?theme=white" /></a>
 </p>
 
 
