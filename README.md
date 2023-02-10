@@ -1,4 +1,13 @@
 # Sparktool
+
+<p align="left">
+    <a href="https://mvnrepository.com/artifact/cn.tenmg/sparktool">
+        <img alt="maven" src="https://img.shields.io/maven-central/v/cn.tenmg/sparktool.svg?style=flat-square">
+    </a>
+    <a target="_blank" href="LICENSE"><img src="https://img.shields.io/:license-Apache%202.0-blue.svg"></a>
+</p>
+
+
 ## 简介
 
 Sparktool是运行Spark SQL的中间件，它能够运行动态化的、可传参的Spark SQL，解决Spark SQL传参的难题。所谓“可传参”即执行Spark SQL时可接收参数，而不是写死的SQL代码；所谓“动态化”即执行Spark SQL时最终执行的SQL可根据传入参数不同而不同（参见[DSQL](https://gitee.com/tenmg/dsql)）。使用Sparktool，开发者不再需要繁杂的逻辑判断和SQL拼接。
